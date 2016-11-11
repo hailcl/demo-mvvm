@@ -1,0 +1,11 @@
+#github "cruffenach/CRToast"
+#github "realm/realm-cocoa"
+#github "SVProgressHUD/SVProgressHUD"
+#github "CocoaLumberjack/CocoaLumberjack" == 2.3.0
+#github "AFNetworking/AFNetworking" ~> 3.0
+#github "Friend-LGA/LGSideMenuController" ~> 1.0.0
+#github "thii/FontAwesome.swift"
+#github "hackiftekhar/IQKeyboardManager"
+#github "MailCore/mailcore2"
+#github "ArtSabintsev/UIFloatLabelTextField"
+github "intuit/LocationManager"

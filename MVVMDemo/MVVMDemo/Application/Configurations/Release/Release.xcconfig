@@ -1,0 +1,12 @@
+//
+//  Release.xcconfig
+//  MVVMDemo
+//
+//  Created by Nguyen Thanh Hai on 11/7/16.
+//  Copyright © 2016 LCL. All rights reserved.
+//
+
+PRODUCT_BUNDLE_IDENTIFIER = com.leftcoastlogic.mvvm
+FOURSQUARE_CLIENT_ID = CVIEYYYKJJTRMCGEL0OLVTKYA1EEQIVINBGKQBUDVWUMYMYB
+FOURSQUARE_CLIENT_SECRET = 5G2VGHLAHF0GSRAQ2QRE5XI2WPQV2K2RJE3XYVL0MGMBUD01
+API_BASE_URL = api.foursquare.com/v2/

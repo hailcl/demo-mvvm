@@ -1,0 +1,24 @@
+//
+// Created by Nguyen Thanh Hai on 11/10/16.
+// Copyright (c) 2016 LCL. All rights reserved.
+//
+
+#import "APIClientTests.h"
+
+
+@implementation APIClientTests {
+
+}
++ (void)setUp {
+    [super setUp];
+}
+
++ (void)tearDown {
+    [super tearDown];
+}
+
+- (void)testAPIs {
+
+}
+
+@end
