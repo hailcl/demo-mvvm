@@ -36,5 +36,9 @@
                           }];
 }
 
+- (User *)getUserById:(NSString *)userId {
+    return [_realmUserRepository getUserById:userId];
+}
+
 
 @end

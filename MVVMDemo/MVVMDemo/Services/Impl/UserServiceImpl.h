@@ -7,9 +7,11 @@
 #import "UserService.h"
 
 @protocol UserRepository;
+@protocol SessionRepository;
 
 @interface UserServiceImpl : NSObject <UserService>
 
-- (instancetype)initWithUserRepository:(NSObject <UserRepository> *)userRepository;
+- (instancetype)initWithUserRepository:(NSObject <UserRepository> *)userRepository
+                     sessionRepositoty:(NSObject <SessionRepository> *)sessionRespository;
 
 @end

@@ -19,6 +19,7 @@
 #import "VenueRepositoryImpl.h"
 #import "RealmVenueRepository.h"
 #import "RealmVenueRepositoryImpl.h"
+#import "SessionRepositoryImpl.h"
 
 static const DDLogLevel ddLogLevel = DDLogLevelDebug | DDLogLevelVerbose;
 
@@ -31,6 +32,8 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug | DDLogLevelVerbose;
 @property (nonatomic, strong) NSObject <VenueAPI> *venueAPI;
 @property (nonatomic, strong) NSObject <VenueRepository> *venueRepository;
 @property (nonatomic, strong) NSObject <RealmVenueRepository> * realmVenueRepository;
+@property (nonatomic, strong) NSObject <SessionRepository> * sessionRepository;
+
 @end
 
 @implementation Dependences
@@ -48,7 +51,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug | DDLogLevelVerbose;
 - (instancetype)init {
     if (self = [super init]) {
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsDirectory = [paths objectAtIndex:0]; // Get documents directory
+        NSString *documentsDirectory = [paths objectAtIndex:0];
 
         DDLogVerbose(@"Application Document Directory : %@", documentsDirectory);
     }
@@ -98,7 +101,8 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug | DDLogLevelVerbose;
 
 - (NSObject<UserService> *)userService {
     if (_userService == nil) {
-        _userService = [[UserServiceImpl alloc] initWithUserRepository:self.userRepository];
+        _userService = [[UserServiceImpl alloc] initWithUserRepository:self.userRepository
+                                                     sessionRepositoty:self.sessionRepository];
     }
 
     return _userService;
@@ -143,6 +147,14 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug | DDLogLevelVerbose;
     }
 
     return _venueService;
+}
+
+- (NSObject <SessionRepository> * )sessionRepository {
+    if (_sessionRepository == nil) {
+        _sessionRepository = [[SessionRepositoryImpl alloc] initWithUserRepository:self.userRepository];
+    }
+
+    return _sessionRepository;
 }
 
 @end
