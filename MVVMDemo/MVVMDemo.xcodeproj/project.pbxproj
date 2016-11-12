@@ -17,6 +17,7 @@
 		12D78D434F983C927429ACD0 /* RealmVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D78EAEDF1682674F1F70A3 /* RealmVenue.m */; };
 		12D78E124172FC983EE98577 /* RealmVenueRepositoryImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D787ACB979EDAD3A05BE90 /* RealmVenueRepositoryImpl.m */; };
 		12D78F21458B28015A8009EB /* VenueServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D78BBEB12F2906D7A894C7 /* VenueServiceImpl.m */; };
+		12D78F4ED35BFEAFF54EFEA6 /* NavigationsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D781AA314E3372E56122BC /* NavigationsViewModel.m */; };
 		12D78F8986AB209E4A262B71 /* SessionRepositoryImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D78DBEED959416D0D6283E /* SessionRepositoryImpl.m */; };
 		B59152291DD37EFF005EBE09 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59152281DD37EFF005EBE09 /* MapKit.framework */; };
 		C20E2B5C1DD16E76009727A4 /* FontAwesome.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C20E2B591DD16E6C009727A4 /* FontAwesome.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -116,6 +117,7 @@
 /* Begin PBXFileReference section */
 		12D780B842C458108AEA1DF4 /* VenueService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueService.h; sourceTree = "<group>"; };
 		12D78142E117E175E69770C2 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		12D781AA314E3372E56122BC /* NavigationsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationsViewModel.m; sourceTree = "<group>"; };
 		12D781DD2FD37B8A18E12C9C /* VenueAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueAPI.h; sourceTree = "<group>"; };
 		12D7822321578FE405DCDF18 /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
 		12D78237DE1F9F28FFFA3C0F /* VenueRepositoryImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueRepositoryImpl.h; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		12D78285D2F1E658B70A5FBF /* RealmVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealmVenue.h; sourceTree = "<group>"; };
 		12D78444D61804A4687187E2 /* LocationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationService.h; sourceTree = "<group>"; };
 		12D7846A8B21FA9BFC6B635E /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
+		12D7850E7A777DCCFFCFA0B8 /* NavigationsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationsViewModel.h; sourceTree = "<group>"; };
 		12D78663FC27215D56F96996 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		12D786A40A4B7BD386436359 /* RealmVenueRepositoryImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealmVenueRepositoryImpl.h; sourceTree = "<group>"; };
 		12D7876ED81E8AC6B6100E3D /* VenueRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueRepository.h; sourceTree = "<group>"; };
@@ -271,6 +274,15 @@
 			path = Impl;
 			sourceTree = "<group>";
 		};
+		12D78A6570E6CFC10D830374 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				12D781AA314E3372E56122BC /* NavigationsViewModel.m */,
+				12D7850E7A777DCCFFCFA0B8 /* NavigationsViewModel.h */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		12D78B1835FE7E77A92DE1AC /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -340,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				C24F28B58E5DCF59B9E0283F /* Views */,
+				12D78A6570E6CFC10D830374 /* ViewModels */,
 			);
 			path = Navigations;
 			sourceTree = "<group>";
@@ -1016,6 +1029,7 @@
 				12D78F8986AB209E4A262B71 /* SessionRepositoryImpl.m in Sources */,
 				12D78695BB4330D91C3C4271 /* LocationServiceImpl.m in Sources */,
 				12D7835F275E063D92EB507B /* Location.m in Sources */,
+				12D78F4ED35BFEAFF54EFEA6 /* NavigationsViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

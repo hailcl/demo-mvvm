@@ -4,6 +4,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
 @protocol VenueService;
 @class VenueViewModel;
@@ -13,6 +14,7 @@
 @required
 
 - (void)bindData:(NSArray <VenueViewModel*>*)venues;
+- (void)bindLocation:(CLLocation *)location;
 
 @end
 

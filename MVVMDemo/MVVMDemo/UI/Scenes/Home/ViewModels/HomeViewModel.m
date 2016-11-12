@@ -37,7 +37,9 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug | DDLogLevelVerbose;
 - (void)explore {
     [_locationService locate:^(Location *location, LocationServiceError error) {
         if (error == Succeed) {
-            DDLogVerbose(@"Locate Succeed");
+            dispatch_after(3.0, dispatch_get_main_queue(), ^{
+                [_view bindLocation:[[CLLocation alloc] initWithLatitude:location.latitude longitude:location.longitude]];
+            });
             [self exploreVenueAt:location];
         } else {
             DDLogVerbose(@"Locate Error");

@@ -4,8 +4,26 @@
 //
 
 #import "NavigationsViewController.h"
+#import "NavigationsViewModel.h"
+#import "Dependences.h"
 
+@interface NavigationsViewController ()
+
+@property (nonatomic, strong) NavigationsViewModel * model;
+
+@end
 
 @implementation NavigationsViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    _model = [[NavigationsViewModel alloc] initWithUserService:[Dependences sharedInstance].userService];
+}
+
+- (IBAction)signout:(UIButton*)sender {
+    [_model logout];
+}
+
 
 @end

@@ -52,6 +52,15 @@
     }];
 }
 
+- (void)signout {
+    [_sessionRespository clear];
+    _currentUser = nil;
+    [_subscribers enumerateObjectsUsingBlock:^(NSObject <UserServiceSubscriber> *obj, NSUInteger idx, BOOL *stop) {
+        [obj loggedOut];
+    }];
+}
+
+
 - (void)addSubcriber:(NSObject <UserServiceSubscriber> *)subcriber {
     [_subscribers addObject:subcriber];
     if (_currentUser) {

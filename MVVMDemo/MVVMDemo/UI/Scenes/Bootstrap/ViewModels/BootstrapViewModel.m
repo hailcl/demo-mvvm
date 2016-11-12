@@ -29,5 +29,8 @@
     [_view loggedIn];
 }
 
+- (void)loggedOut {
+    [_view loggedOut];
+}
 
 @end
