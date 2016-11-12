@@ -9,6 +9,7 @@
 @protocol UserService;
 @class Configurations;
 @protocol VenueService;
+@protocol LocationService;
 
 
 @interface Dependences : NSObject
@@ -16,6 +17,7 @@
 @property (nonatomic, strong) Storyboards * storyboards;
 @property (nonatomic, strong) NSObject<UserService> * userService;
 @property (nonatomic, strong) NSObject<VenueService> * venueService;
+@property (nonatomic, strong) NSObject <LocationService> * locationService;
 @property (nonatomic, strong) Configurations * configurations;
 
 + (instancetype)sharedInstance;

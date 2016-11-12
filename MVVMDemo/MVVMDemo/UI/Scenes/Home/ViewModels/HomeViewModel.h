@@ -7,6 +7,7 @@
 
 @protocol VenueService;
 @class VenueViewModel;
+@protocol LocationService;
 
 @protocol HomeView <NSObject>
 @required
@@ -17,7 +18,8 @@
 
 @interface HomeViewModel : NSObject
 
-- (instancetype)initWithVenueService:(NSObject <VenueService>*)venueService view:(NSObject <HomeView>*)view;
+- (instancetype)initWithVenueService:(NSObject <VenueService>*)venueService view:(NSObject <HomeView>*)view
+                     locationService:(NSObject <LocationService>*)locationService;
 - (void)explore;
 
 @end

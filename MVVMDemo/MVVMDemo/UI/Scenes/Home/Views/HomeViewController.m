@@ -38,7 +38,8 @@
     _tableView.dataSource = _dataSource;
     _tableView.delegate = _dataSource;
 
-    _model = [[HomeViewModel alloc] initWithVenueService:[Dependences sharedInstance].venueService view:self];
+    _model = [[HomeViewModel alloc] initWithVenueService:[Dependences sharedInstance].venueService view:self
+                                         locationService:[Dependences sharedInstance].locationService];
     [_model explore];
 }
 

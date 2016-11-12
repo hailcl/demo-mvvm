@@ -17,9 +17,11 @@
 #import "VenueServiceImpl.h"
 #import "VenueAPICLient.h"
 #import "VenueRepositoryImpl.h"
+#import "LocationService.h"
 #import "RealmVenueRepository.h"
 #import "RealmVenueRepositoryImpl.h"
 #import "SessionRepositoryImpl.h"
+#import "LocationServiceImpl.h"
 
 static const DDLogLevel ddLogLevel = DDLogLevelDebug | DDLogLevelVerbose;
 
@@ -155,6 +157,14 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug | DDLogLevelVerbose;
     }
 
     return _sessionRepository;
+}
+
+- (NSObject <LocationService>*)locationService {
+    if (_locationService == nil) {
+        _locationService = [[LocationServiceImpl alloc] init];
+    }
+
+    return _locationService;
 }
 
 @end

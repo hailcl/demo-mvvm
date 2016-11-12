@@ -8,6 +8,8 @@
 #import "ExploreVenueParams.h"
 #import "VenueViewModel.h"
 #import "Venue.h"
+#import "LocationService.h"
+#import "Location.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
 
 static const DDLogLevel ddLogLevel = DDLogLevelDebug | DDLogLevelVerbose;
@@ -16,23 +18,37 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug | DDLogLevelVerbose;
 
 @property (nonatomic, weak) NSObject <VenueService> * venueService;
 @property (nonatomic, weak) NSObject <HomeView> * view;
-
+@property (nonatomic, weak) NSObject <LocationService> * locationService;
 @end
 
 @implementation HomeViewModel
 
-- (instancetype)initWithVenueService:(NSObject <VenueService>*)venueService view:(NSObject <HomeView>*)view {
+- (instancetype)initWithVenueService:(NSObject <VenueService>*)venueService view:(NSObject <HomeView>*)view
+                     locationService:(NSObject <LocationService>*)locationService {
     if (self = [super init]) {
         _venueService = venueService;
         _view = view;
+        _locationService = locationService;
     }
 
     return self;
 }
 
 - (void)explore {
-    ExploreVenueParams * params = [[ExploreVenueParams alloc] initWithLatitude:10.8038533
-                                                                     longitude:106.6746885];
+    [_locationService locate:^(Location *location, LocationServiceError error) {
+        if (error == Succeed) {
+            DDLogVerbose(@"Locate Succeed");
+            [self exploreVenueAt:location];
+        } else {
+            DDLogVerbose(@"Locate Error");
+        }
+    }];
+
+}
+
+- (void)exploreVenueAt:(Location *)location {
+    ExploreVenueParams * params = [[ExploreVenueParams alloc] initWithLatitude:location.latitude
+                                                                     longitude:location.longitude];
     [_venueService exploreAt:params
                     complete:^(NSArray<Venue *> *venues) {
                         NSMutableArray <VenueViewModel*>* viewModels = [NSMutableArray new];
@@ -47,6 +63,5 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug | DDLogLevelVerbose;
                         [_view bindData:viewModels];
                     }];
 }
-
 
 @end
