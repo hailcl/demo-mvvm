@@ -44,6 +44,11 @@
     [_view allowUserInteractor];
 }
 
+- (void)loggedOut {
+
+}
+
+
 - (void)changeUsername:(NSString *)username {
     _username = username;
     [self updateView];

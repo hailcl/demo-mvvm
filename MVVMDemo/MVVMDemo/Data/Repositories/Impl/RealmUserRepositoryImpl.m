@@ -8,6 +8,9 @@
 #import "SaveUserParams.h"
 #import "RealmUser.h"
 #import "User.h"
+#import <CocoaLumberjack/CocoaLumberjack.h>
+
+static const DDLogLevel ddLogLevel = DDLogLevelDebug | DDLogLevelVerbose;
 
 @interface RealmUserRepositoryImpl ()
 
@@ -37,5 +40,18 @@
     }];
 }
 
+- (User *)getUserById:(NSString *)userId {
+    User * model = nil;
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"objectId = %@", userId];
+    RLMResults <RealmUser*> * users = [RealmUser allObjects];
+    NSArray <RealmUser*> * result = [users objectsWithPredicate:pred];
+
+    if (result.count) {
+        RealmUser * data = result[0];
+        model = [[User alloc] initWithUsername:data.username];
+    }
+
+    return model;
+}
 
 @end

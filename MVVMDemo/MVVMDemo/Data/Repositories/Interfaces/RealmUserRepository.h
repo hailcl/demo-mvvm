@@ -7,9 +7,11 @@
 
 @class RealmUser;
 @class SaveUserParams;
+@class User;
 
 @protocol RealmUserRepository <NSObject>
 
 - (void)saveUser:(SaveUserParams*)params complete:(void(^)(RealmUser * user))completion;
+- (User *)getUserById:(NSString *)userId;
 
 @end

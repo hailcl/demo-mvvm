@@ -13,13 +13,16 @@
 
 @protocol UserService <NSObject>
 
+- (User *)currentUser;
 - (void)loginWithParams:(LoginParams *)params complete:(void(^)(LoginError * error))completion;
 - (void)addSubcriber:(NSObject <UserServiceSubscriber> *)subcriber;
+- (void)signout;
 
 @end
 
 @protocol UserServiceSubscriber <NSObject>
 
 - (void)loggedIn:(User*)user;
+- (void)loggedOut;
 
 @end

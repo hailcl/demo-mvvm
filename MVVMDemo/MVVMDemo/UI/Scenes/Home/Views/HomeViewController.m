@@ -3,6 +3,7 @@
 // Copyright (c) 2016 LCL. All rights reserved.
 //
 
+#import <MapKit/MapKit.h>
 #import "HomeViewController.h"
 #import "CenterView.h"
 #import "HomeViewModel.h"
@@ -15,6 +16,7 @@
 @property (nonatomic, strong) HomeViewModel * model;
 @property (nonatomic, strong) HomeDataSource * dataSource;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
 
@@ -38,7 +40,8 @@
     _tableView.dataSource = _dataSource;
     _tableView.delegate = _dataSource;
 
-    _model = [[HomeViewModel alloc] initWithVenueService:[Dependences sharedInstance].venueService view:self];
+    _model = [[HomeViewModel alloc] initWithVenueService:[Dependences sharedInstance].venueService view:self
+                                         locationService:[Dependences sharedInstance].locationService];
     [_model explore];
 }
 
@@ -51,6 +54,15 @@
 - (void)bindData:(NSArray <VenueViewModel *> *)venues {
     [_dataSource loadVenues:venues];
     [_tableView reloadData];
+}
+
+- (void)bindLocation:(CLLocation *)location {
+    MKCoordinateSpan span = MKCoordinateSpanMake(0.1f, 0.1f);
+    CLLocationCoordinate2D coordinate = {location.coordinate.latitude,location.coordinate.longitude};
+    MKCoordinateRegion region = {coordinate, span};
+    MKCoordinateRegion regionThatFits = [_mapView regionThatFits:region];
+
+    [_mapView setRegion:regionThatFits animated:YES];
 }
 
 - (void)viewVenue:(VenueViewModel *)venue {

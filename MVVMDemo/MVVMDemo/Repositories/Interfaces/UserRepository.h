@@ -11,5 +11,6 @@
 @protocol UserRepository <NSObject>
 
 - (void)saveUser:(SaveUserParams*)params complete:(void(^)(User * user))completion;
+- (User *)getUserById:(NSString *)userId;
 
 @end
