@@ -12,4 +12,6 @@
 
 - (void)exploreAt:(ExploreVenueParams*)params complete:(void(^)(NSArray <Venue*> *venues))completion;
 
+- (void)getPassByVenues:(void (^)(NSArray<Venue *> *venues))completion;
+- (void)searchPassBy:(NSString *)keyword complete:(void (^)(NSArray<Venue *> *venues))completion;
 @end

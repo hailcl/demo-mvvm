@@ -8,17 +8,17 @@
 
 @class VenueViewModel;
 
-@protocol HomeDataSourceView <NSObject>
+@protocol VenuesDataSourceView <NSObject>
 
 - (void)viewVenue:(VenueViewModel *)venue;
 
 @end
 
-@interface HomeDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
+@interface VenuesDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, weak) NSObject <HomeDataSourceView> * view;
+@property (nonatomic, weak) NSObject <VenuesDataSourceView> * view;
 
-- (instancetype)initWithView:(NSObject <HomeDataSourceView> * ) view;
+- (instancetype)initWithView:(NSObject <VenuesDataSourceView> * ) view;
 
 - (void)loadVenues:(NSArray <VenueViewModel*>*)venues;
 

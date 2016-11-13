@@ -5,7 +5,7 @@
 
 #import "Navigator.h"
 #import "VenueViewModel.h"
-#import "VenueViewController.h"
+#import "VenueDetailViewController.h"
 #import "PassByViewController.h"
 
 @interface Navigator ()
@@ -17,7 +17,8 @@
 
 @implementation Navigator
 
-- (instancetype)initWithStoryboard:(UIStoryboard *)storyboard navigateController:(UINavigationController *)navigateController {
+- (instancetype)initWithStoryboard:(UIStoryboard *)storyboard
+                navigateController:(UINavigationController *)navigateController {
     if (self == [super init]) {
         self.storyboard = storyboard;
         self.navigateController = navigateController;
@@ -27,12 +28,15 @@
 }
 
 - (void)showVenue:(VenueViewModel *)venue {
-    VenueViewController * controller = [_storyboard instantiateViewControllerWithIdentifier:@"VenueViewController"];
+    NSString * identifier = @"VenueDetailViewController";
+    VenueDetailViewController * controller = [_storyboard instantiateViewControllerWithIdentifier:identifier];
+    controller.navigator = self;
     [_navigateController pushViewController:controller animated:YES];
 }
 
 - (void)showPassBy {
     PassByViewController * controller = [_storyboard instantiateViewControllerWithIdentifier:@"PassByViewController"];
+    controller.navigator = self;
     [_navigateController pushViewController:controller animated:YES];
 }
 

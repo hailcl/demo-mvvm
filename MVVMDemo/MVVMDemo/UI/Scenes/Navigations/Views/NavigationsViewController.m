@@ -22,7 +22,9 @@
 }
 
 - (IBAction)signout:(UIButton*)sender {
-    [_model logout];
+    [self showConfirm:@"Do you want to sign out ?" completion:^{
+        [_model logout];
+    }];
 }
 
 

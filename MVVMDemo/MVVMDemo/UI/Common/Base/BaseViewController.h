@@ -13,5 +13,6 @@
 
 - (void)showloading;
 - (void)hideloading;
+- (void)showConfirm:(NSString *)message completion:(void(^)(void))completion;
 
 @end

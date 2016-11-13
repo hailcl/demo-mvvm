@@ -8,13 +8,13 @@
 #import "CenterView.h"
 #import "HomeViewModel.h"
 #import "Dependences.h"
-#import "HomeDataSource.h"
+#import "VenuesDataSource.h"
 #import "Navigator.h"
 
-@interface HomeViewController () <HomeView, HomeDataSourceView>
+@interface HomeViewController () <HomeView, VenuesDataSourceView>
 
 @property (nonatomic, strong) HomeViewModel * model;
-@property (nonatomic, strong) HomeDataSource * dataSource;
+@property (nonatomic, strong) VenuesDataSource * dataSource;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
@@ -36,7 +36,7 @@
                                                             action:@selector(showPassBy)];
     [self.navigationItem setRightBarButtonItem:itemRight animated:YES];
 
-    _dataSource = [[HomeDataSource alloc] initWithView:self];
+    _dataSource = [[VenuesDataSource alloc] initWithView:self];
     _tableView.dataSource = _dataSource;
     _tableView.delegate = _dataSource;
 

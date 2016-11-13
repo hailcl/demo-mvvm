@@ -35,4 +35,12 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug | DDLogLevelVerbose;
     }];
 }
 
+- (void)getPassByVenues:(void (^)(NSArray<Venue *> *venues))completion {
+    [_venueRepository getPassByVenues:completion];
+}
+
+- (void)searchPassBy:(NSString *)keyword complete:(void (^)(NSArray<Venue *> *venues))completion {
+    [_venueRepository searchPassBy:keyword complete:completion];
+}
+
 @end

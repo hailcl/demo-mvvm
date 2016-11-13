@@ -7,5 +7,8 @@
 #import "BaseViewController.h"
 
 
-@interface VenueViewController : BaseViewController
+@interface VenueDetailViewController : BaseViewController
+
+@property (nonatomic, copy) NSString * venueId;
+
 @end

@@ -10,5 +10,7 @@
 @protocol VenueRepository <NSObject>
 
 - (void)saveVenues:(NSArray<Venue*>*)venues complete:(void(^)(NSArray * venues))completion;
+- (void)getPassByVenues:(void (^)(NSArray<Venue *> *venues))completion;
+- (void)searchPassBy:(NSString *)keyword complete:(void (^)(NSArray<Venue *> *venues))completion;
 
 @end
