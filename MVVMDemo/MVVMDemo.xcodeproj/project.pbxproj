@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		12D780227C9366BFFD461E30 /* VenueRepositoryImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D787C36A06F58DE58956BD /* VenueRepositoryImpl.m */; };
+		12D781EA0EE9F81E45737F28 /* SigninViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D78609DF13177061F88186 /* SigninViewModelTests.m */; };
 		12D7835F275E063D92EB507B /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D78142E117E175E69770C2 /* Location.m */; };
 		12D7843AAAEE196657DB6657 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D7822321578FE405DCDF18 /* Venue.m */; };
 		12D78695BB4330D91C3C4271 /* LocationServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D78D3ADDD90E8438A862E4 /* LocationServiceImpl.m */; };
 		12D7882C203C1AD175E486B2 /* VenueAPICLient.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D78DDF5E5FE45B71EAE1D3 /* VenueAPICLient.m */; };
 		12D788DB0D21062117C3646A /* ExploreVenueParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D78E3A989DF91E63F2923E /* ExploreVenueParams.m */; };
+		12D78AAC9281837F499B2EBE /* SigninViewMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D78AE54D65879084C5DC95 /* SigninViewMock.m */; };
+		12D78B63F89E6CBC34CF64B9 /* UserServiceMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D78C749C252BCA39932D58 /* UserServiceMock.m */; };
 		12D78CD0E313A333AD088955 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D78E1B7E1EF19F2DE89A58 /* APIClient.m */; };
 		12D78D434F983C927429ACD0 /* RealmVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D78EAEDF1682674F1F70A3 /* RealmVenue.m */; };
 		12D78E124172FC983EE98577 /* RealmVenueRepositoryImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D787ACB979EDAD3A05BE90 /* RealmVenueRepositoryImpl.m */; };
@@ -126,24 +129,30 @@
 		12D78444D61804A4687187E2 /* LocationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationService.h; sourceTree = "<group>"; };
 		12D7846A8B21FA9BFC6B635E /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
 		12D7850E7A777DCCFFCFA0B8 /* NavigationsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationsViewModel.h; sourceTree = "<group>"; };
+		12D78609DF13177061F88186 /* SigninViewModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SigninViewModelTests.m; sourceTree = "<group>"; };
 		12D78663FC27215D56F96996 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		12D786A40A4B7BD386436359 /* RealmVenueRepositoryImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealmVenueRepositoryImpl.h; sourceTree = "<group>"; };
+		12D7875BB3757EE30BA1EAF2 /* SigninViewModelTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SigninViewModelTests.h; sourceTree = "<group>"; };
 		12D7876ED81E8AC6B6100E3D /* VenueRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueRepository.h; sourceTree = "<group>"; };
 		12D7878B7047BCA904D04DDE /* LocationServiceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationServiceImpl.h; sourceTree = "<group>"; };
 		12D787ACB979EDAD3A05BE90 /* RealmVenueRepositoryImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealmVenueRepositoryImpl.m; sourceTree = "<group>"; };
 		12D787C36A06F58DE58956BD /* VenueRepositoryImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueRepositoryImpl.m; sourceTree = "<group>"; };
 		12D7894D8678FB9A2EBA3DA7 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
 		12D78AE258C3C153B31F5F97 /* VenueAPICLient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueAPICLient.h; sourceTree = "<group>"; };
+		12D78AE54D65879084C5DC95 /* SigninViewMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SigninViewMock.m; sourceTree = "<group>"; };
 		12D78B8C5C204B9709CDDB98 /* SessionRepositoryImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionRepositoryImpl.h; sourceTree = "<group>"; };
 		12D78B9AACA4AC75138660B0 /* SessionRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionRepository.h; sourceTree = "<group>"; };
 		12D78BBEB12F2906D7A894C7 /* VenueServiceImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueServiceImpl.m; sourceTree = "<group>"; };
+		12D78C749C252BCA39932D58 /* UserServiceMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserServiceMock.m; sourceTree = "<group>"; };
 		12D78D3ADDD90E8438A862E4 /* LocationServiceImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationServiceImpl.m; sourceTree = "<group>"; };
+		12D78D9AD8D020B29E8861DE /* UserServiceMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserServiceMock.h; sourceTree = "<group>"; };
 		12D78DBEED959416D0D6283E /* SessionRepositoryImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionRepositoryImpl.m; sourceTree = "<group>"; };
 		12D78DDF5E5FE45B71EAE1D3 /* VenueAPICLient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueAPICLient.m; sourceTree = "<group>"; };
 		12D78E1B7E1EF19F2DE89A58 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
 		12D78E1FFADAA9369B73B9A7 /* RealmVenueRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealmVenueRepository.h; sourceTree = "<group>"; };
 		12D78E3A989DF91E63F2923E /* ExploreVenueParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExploreVenueParams.m; sourceTree = "<group>"; };
 		12D78EAEDF1682674F1F70A3 /* RealmVenue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealmVenue.m; sourceTree = "<group>"; };
+		12D78F3C82165B990736AC8E /* SigninViewMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SigninViewMock.h; sourceTree = "<group>"; };
 		12D78F6C1D51648059460C2F /* VenueServiceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueServiceImpl.h; sourceTree = "<group>"; };
 		B59152281DD37EFF005EBE09 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C20E2B591DD16E6C009727A4 /* FontAwesome.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FontAwesome.framework; sourceTree = "<group>"; };
@@ -265,6 +274,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12D780ADB393A28FE066D016 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				12D78AE54D65879084C5DC95 /* SigninViewMock.m */,
+				12D78F3C82165B990736AC8E /* SigninViewMock.h */,
+				12D78C749C252BCA39932D58 /* UserServiceMock.m */,
+				12D78D9AD8D020B29E8861DE /* UserServiceMock.h */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		12D788E55DE2C87A82E2FAE0 /* Impl */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +301,15 @@
 				12D7850E7A777DCCFFCFA0B8 /* NavigationsViewModel.h */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		12D78AAECF6A98EA117A1DA9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				12D780ADB393A28FE066D016 /* Mocks */,
+				12D78F6BCA6A6720EA4F8AF9 /* Tests */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		12D78B1835FE7E77A92DE1AC /* API */ = {
@@ -300,6 +329,15 @@
 				12D781DD2FD37B8A18E12C9C /* VenueAPI.h */,
 			);
 			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		12D78F6BCA6A6720EA4F8AF9 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				12D78609DF13177061F88186 /* SigninViewModelTests.m */,
+				12D7875BB3757EE30BA1EAF2 /* SigninViewModelTests.h */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		B59152271DD37EFE005EBE09 /* Frameworks */ = {
@@ -844,6 +882,7 @@
 				C2BBD4A71DD03B65006EEE0E /* MVVMDemoTests.m */,
 				C2BBD4A91DD03B65006EEE0E /* Info.plist */,
 				C24F2F77FD43C542AB747AAB /* APIClient */,
+				12D78AAECF6A98EA117A1DA9 /* UI */,
 			);
 			path = MVVMDemoTests;
 			sourceTree = "<group>";
@@ -1041,6 +1080,9 @@
 				C24F227E2F71E731BEE15F26 /* APIClientTests.m in Sources */,
 				C24F2F1A96FD00B0EF9603B7 /* VenueViewController.m in Sources */,
 				C24F2ABFB63AB2DE91DD4BCF /* PassByViewController.m in Sources */,
+				12D781EA0EE9F81E45737F28 /* SigninViewModelTests.m in Sources */,
+				12D78AAC9281837F499B2EBE /* SigninViewMock.m in Sources */,
+				12D78B63F89E6CBC34CF64B9 /* UserServiceMock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1157,6 +1199,7 @@
 				INFOPLIST_FILE = MVVMDemo/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1172,6 +1215,7 @@
 				INFOPLIST_FILE = MVVMDemo/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
