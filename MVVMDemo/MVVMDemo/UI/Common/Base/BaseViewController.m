@@ -30,4 +30,21 @@
     [SVProgressHUD dismissWithDelay:1.0f];
 }
 
+- (void)showConfirm:(NSString *)message completion:(void(^)(void))completion {
+    UIAlertController * alertController = [UIAlertController alertControllerWithTitle:@"MVVM"
+                                                                              message:message
+                                                                       preferredStyle:UIAlertControllerStyleAlert];
+
+    UIAlertAction * cancelAction = [UIAlertAction actionWithTitle:@"Close" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction * okAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDestructive
+                                                      handler:^(UIAlertAction *action) {
+                                                          completion ? completion() : nil;
+                                                      }];
+
+    [alertController addAction:cancelAction];
+    [alertController addAction:okAction];
+
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
 @end

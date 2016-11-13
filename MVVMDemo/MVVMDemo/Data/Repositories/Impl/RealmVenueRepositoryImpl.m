@@ -46,5 +46,25 @@
     }];
 }
 
+- (void)getPassByVenues:(void (^)(NSArray<RealmVenue *> *venues))completion {
+    RLMResults <RealmVenue*> * results = [RealmVenue allObjects];
+    NSMutableArray <RealmVenue*> * venues = [NSMutableArray new];
+    for (RealmVenue * data in results) {
+        [venues addObject:data];
+    }
+    completion ? completion(venues) : nil;
+}
+
+- (void)searchPassBy:(NSString *)keyword complete:(void (^)(NSArray<RealmVenue *> *venues))completion {
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"name CONTAINS %@", keyword];
+    RLMResults <RealmVenue *> * results = [RealmVenue allObjects];
+    NSArray <RealmVenue*> * data = [results objectsWithPredicate:pred];
+    NSMutableArray <RealmVenue*> * venues = [NSMutableArray new];
+    for (RealmVenue * entity in data) {
+        [venues addObject:entity];
+    }
+    completion ? completion(venues) : nil;
+}
+
 
 @end

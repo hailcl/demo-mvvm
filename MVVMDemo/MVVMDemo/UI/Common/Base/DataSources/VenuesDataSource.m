@@ -3,20 +3,20 @@
 // Copyright (c) 2016 LCL. All rights reserved.
 //
 
-#import "HomeDataSource.h"
+#import "VenuesDataSource.h"
 #import "VenueViewCell.h"
 #import "VenueViewModel.h"
 
-@interface HomeDataSource () {
+@interface VenuesDataSource () {
     NSMutableArray <VenueViewModel*> * _venues;
 }
 
 @end
 
-@implementation HomeDataSource
+@implementation VenuesDataSource
 
 
-- (instancetype)initWithView:(NSObject <HomeDataSourceView> *)view {
+- (instancetype)initWithView:(NSObject <VenuesDataSourceView> *)view {
     if (self = [super init]) {
         _venues = [NSMutableArray new];
         _view = view;
