@@ -43,4 +43,9 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug | DDLogLevelVerbose;
     [_venueRepository searchPassBy:keyword complete:completion];
 }
 
+- (void)discover:(DiscoverVenueParams *)params complete:(void (^)(Venue *venue, NSError *error))completion {
+    [_venueApi discover:params complete:completion];
+}
+
+
 @end

@@ -30,6 +30,7 @@
 - (void)showVenue:(VenueViewModel *)venue {
     NSString * identifier = @"VenueDetailViewController";
     VenueDetailViewController * controller = [_storyboard instantiateViewControllerWithIdentifier:identifier];
+    controller.venueId = venue.venueId;
     controller.navigator = self;
     [_navigateController pushViewController:controller animated:YES];
 }

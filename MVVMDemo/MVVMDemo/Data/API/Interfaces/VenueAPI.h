@@ -7,9 +7,11 @@
 
 @class Venue;
 @class ExploreVenueParams;
+@class DiscoverVenueParams;
 
 @protocol VenueAPI <NSObject>
 
 - (void)explore:(ExploreVenueParams *)params complete:(void(^)(NSArray<Venue*>* venues, NSError * error))completion;
+- (void)discover:(DiscoverVenueParams *)params complete:(void (^)(Venue *venue, NSError *error))completion;
 
 @end

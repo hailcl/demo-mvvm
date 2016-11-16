@@ -50,11 +50,13 @@
 		C24F282759C17C444CBFDBC6 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24F2B9C45DC1A02B46CB923 /* BaseViewController.m */; };
 		C24F29711217989597EF6DDF /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = C24F29372CD9C5207CBD5441 /* User.m */; };
 		C24F29874EF725D49C9CED41 /* LoginParams.m in Sources */ = {isa = PBXBuildFile; fileRef = C24F2CE9226105EAF37DD989 /* LoginParams.m */; };
+		C24F2B97B70F17CFF556A59A /* VenueDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C24F2CDF30B11C33847F5E65 /* VenueDetailViewModel.m */; };
 		C24F2CA96BB501F041CDE5A5 /* RealmUserRepositoryImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = C24F2B44376A39AA949435A6 /* RealmUserRepositoryImpl.m */; };
 		C24F2D2E534F34710E65DD41 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24F2D61A6F235D9220EACFB /* MainViewController.m */; };
 		C24F2DC06D333791C9913448 /* UserServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = C24F2745C205A578AB803EB9 /* UserServiceImpl.m */; };
 		C24F2E8516E79F820DA33F91 /* Configurations.m in Sources */ = {isa = PBXBuildFile; fileRef = C24F295576C99B302C39A716 /* Configurations.m */; };
 		C24F2EC875021760D380DE24 /* BaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C24F271613E961E029429CD6 /* BaseViewModel.m */; };
+		C24F2F0871A9A5B164DD5667 /* DiscoverVenueParams.m in Sources */ = {isa = PBXBuildFile; fileRef = C24F224E8A4A1DAD949BDC94 /* DiscoverVenueParams.m */; };
 		C24F2F522284D62F00947450 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C24F20FEE3F5E04A553CA54A /* Main.storyboard */; };
 		C24F2F8CC1C9CEE2EED9EAAD /* RealmFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C24F2BC27FF1240548C07D6D /* RealmFactory.m */; };
 		C24F2F8F54DF4E16E9ADC163 /* Storyboards.m in Sources */ = {isa = PBXBuildFile; fileRef = C24F2D5F498AEE2955908A65 /* Storyboards.m */; };
@@ -176,6 +178,7 @@
 		C24F2158484CDA8D4097753C /* HomeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewModel.m; sourceTree = "<group>"; };
 		C24F21CE90BA1954ACBBB51E /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		C24F2202E98308FEBAE10329 /* RealmUserRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealmUserRepository.h; sourceTree = "<group>"; };
+		C24F224E8A4A1DAD949BDC94 /* DiscoverVenueParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverVenueParams.m; sourceTree = "<group>"; };
 		C24F226E1D6D7C117CF3F3C4 /* SigninViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SigninViewController.m; sourceTree = "<group>"; };
 		C24F22AB893EBE3E1E50C4F6 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		C24F22B03A9FCACE2644B56D /* HomeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewModel.h; sourceTree = "<group>"; };
@@ -208,6 +211,7 @@
 		C24F28F9F54F18A7CFAD1A0A /* Dependences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dependences.m; sourceTree = "<group>"; };
 		C24F29372CD9C5207CBD5441 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		C24F295576C99B302C39A716 /* Configurations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configurations.m; sourceTree = "<group>"; };
+		C24F296FE1530E7D3DE71376 /* VenueDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueDetailViewModel.h; sourceTree = "<group>"; };
 		C24F29A3CFBAB19595D8EAB3 /* APIClientTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClientTests.h; sourceTree = "<group>"; };
 		C24F29BD34000395784E62BD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C24F2A008A1D7644A9813F18 /* Storyboards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Storyboards.h; sourceTree = "<group>"; };
@@ -223,6 +227,8 @@
 		C24F2BD7703901F79BC1337A /* BootstrapViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BootstrapViewModel.m; sourceTree = "<group>"; };
 		C24F2C0ED519AFB55072FF33 /* BaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewModel.h; sourceTree = "<group>"; };
 		C24F2C38145C538666DF9B4C /* LoginParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginParams.h; sourceTree = "<group>"; };
+		C24F2C7440FA1FBE332C0076 /* DiscoverVenueParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverVenueParams.h; sourceTree = "<group>"; };
+		C24F2CDF30B11C33847F5E65 /* VenueDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueDetailViewModel.m; sourceTree = "<group>"; };
 		C24F2CE9226105EAF37DD989 /* LoginParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginParams.m; sourceTree = "<group>"; };
 		C24F2CF228F9B118231C98EF /* BootstrapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BootstrapViewController.h; sourceTree = "<group>"; };
 		C24F2D3E362A020604F25012 /* PassByViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassByViewController.h; sourceTree = "<group>"; };
@@ -376,6 +382,15 @@
 				C237A7931DD17CE2001375D2 /* UIFloatLabelTextField.m */,
 			);
 			path = UIFloatLabelTextField;
+			sourceTree = "<group>";
+		};
+		C24F20140959A79D3577D38E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C24F2CDF30B11C33847F5E65 /* VenueDetailViewModel.m */,
+				C24F296FE1530E7D3DE71376 /* VenueDetailViewModel.h */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		C24F204BAEA969C16623AF4D /* Data */ = {
@@ -685,6 +700,8 @@
 				C24F22B1ADCFD0E4780B7EED /* SaveUserParams.h */,
 				12D78E3A989DF91E63F2923E /* ExploreVenueParams.m */,
 				12D782460E468E0C72E28799 /* ExploreVenueParams.h */,
+				C24F224E8A4A1DAD949BDC94 /* DiscoverVenueParams.m */,
+				C24F2C7440FA1FBE332C0076 /* DiscoverVenueParams.h */,
 			);
 			path = Params;
 			sourceTree = "<group>";
@@ -703,6 +720,7 @@
 			isa = PBXGroup;
 			children = (
 				C24F2CEA99A982A5FF11F5EC /* Views */,
+				C24F20140959A79D3577D38E /* ViewModels */,
 			);
 			path = Venues;
 			sourceTree = "<group>";
@@ -1085,6 +1103,8 @@
 				12D7835F275E063D92EB507B /* Location.m in Sources */,
 				12D78F4ED35BFEAFF54EFEA6 /* NavigationsViewModel.m in Sources */,
 				12D780842396204639ECC319 /* VenuesDataSource.m in Sources */,
+				C24F2B97B70F17CFF556A59A /* VenueDetailViewModel.m in Sources */,
+				C24F2F0871A9A5B164DD5667 /* DiscoverVenueParams.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
