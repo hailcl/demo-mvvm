@@ -14,8 +14,9 @@
 @property (nonatomic, assign) double latitude;
 @property (nonatomic, assign) double longitude;
 @property (nonatomic, assign) float rating;
+@property (nonatomic, copy) NSString * canonicalUrl;
 
 - (instancetype)initWithId:(NSString *)id name:(NSString *)name location:(NSString *)location latitude:(double)lat
-                 longitude:(double)lng rating:(float)rating;
+                 longitude:(double)lng rating:(float)rating canonicalUrl:(NSString *)canonicalUrl;
 
 @end

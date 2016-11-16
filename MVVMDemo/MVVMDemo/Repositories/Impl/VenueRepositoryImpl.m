@@ -39,7 +39,8 @@
                                              location:obj.location
                                              latitude:obj.latitude
                                             longitude:obj.longitude
-                                               rating:obj.rating];
+                                               rating:obj.rating
+                                         canonicalUrl:obj.canonicalUrl];
             [models addObject:model];
         }];
 
@@ -56,7 +57,8 @@
                                              location:obj.location
                                              latitude:obj.latitude
                                             longitude:obj.longitude
-                                               rating:obj.rating];
+                                               rating:obj.rating
+                                         canonicalUrl:obj.canonicalUrl];
             [models addObject:model];
         }];
 

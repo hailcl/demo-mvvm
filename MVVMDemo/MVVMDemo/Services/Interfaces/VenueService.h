@@ -7,6 +7,7 @@
 
 @class Venue;
 @class ExploreVenueParams;
+@class DiscoverVenueParams;
 
 @protocol VenueService <NSObject>
 
@@ -14,4 +15,6 @@
 
 - (void)getPassByVenues:(void (^)(NSArray<Venue *> *venues))completion;
 - (void)searchPassBy:(NSString *)keyword complete:(void (^)(NSArray<Venue *> *venues))completion;
+- (void)discover:(DiscoverVenueParams *)params complete:(void (^)(Venue *venue, NSError *error))completion;
+
 @end

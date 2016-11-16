@@ -7,6 +7,7 @@
 #import "ExploreVenueParams.h"
 #import "Venue.h"
 #import "APIClient.h"
+#import "DiscoverVenueParams.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
 
 static const DDLogLevel ddLogLevel = DDLogLevelDebug | DDLogLevelVerbose;
@@ -27,6 +28,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug | DDLogLevelVerbose;
 @property (nonatomic, copy) NSString * name;
 @property (nonatomic, copy) NSString * rating;
 @property (nonatomic, copy) NSString * location;
+@property (nonatomic, copy) NSString * canonicalUrl;
 
 @end
 
@@ -49,6 +51,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug | DDLogLevelVerbose;
         _name = @"name";
         _rating = @"rating";
         _location = @"location";
+        _canonicalUrl = @"canonicalUrl";
     }
 
     return self;
@@ -105,6 +108,30 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug | DDLogLevelVerbose;
     }];
 }
 
+- (void)discover:(DiscoverVenueParams *)params complete:(void (^)(Venue *venue, NSError *error))completion {
+    __weak __typeof(self) weakSelf = self;
+    NSString * url = [NSString stringWithFormat:@"venues/%@",params.venueId];
+    [_apiClient getObjectAt:url
+                     params:@{}
+                   complete:^(NSDictionary *data, NSError *error) {
+                       if (error == nil) {
+                           NSDictionary * metaDict = data[_columns.meta];
+                           if ([metaDict[_columns.code] intValue] == 200) {
+                               NSDictionary * responseDict = data[_columns.response];
+                               Venue * venue = [weakSelf venueFromDict:responseDict];
+                               completion ? completion(venue, error) : nil;
+                           }
+
+                           else {
+                               completion ? completion(nil, [NSError errorWithDomain:@"" code:9999 userInfo:@{}]) : nil;
+                           }
+                       } else {
+                           completion ? completion(nil, error) : nil;
+                       }
+                   }];
+}
+
+
 - (Venue *)venueFromDict:(NSDictionary *)dictionary {
     NSDictionary * venueDict = dictionary[_columns.venue];
     NSString * venueId = venueDict[_columns.id];
@@ -121,7 +148,8 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug | DDLogLevelVerbose;
                                      location:location
                                      latitude:latitude
                                     longitude:longitude
-                                       rating:rating];
+                                       rating:rating 
+                                 canonicalUrl:venueDict[_columns.canonicalUrl]];
 
     return venue;
 }

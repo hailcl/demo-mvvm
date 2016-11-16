@@ -57,6 +57,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug | DDLogLevelVerbose;
                         [venues enumerateObjectsUsingBlock:^(Venue *obj, NSUInteger idx, BOOL *stop) {
                             VenueViewModel * viewModel = [VenueViewModel new];
                             viewModel.name = obj.name;
+                            viewModel.venueId = obj.venueId;
                             viewModel.location = obj.location;
 
                             [viewModels addObject:viewModel];

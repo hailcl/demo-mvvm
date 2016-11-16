@@ -11,6 +11,7 @@
 @property NSString * venueId;
 @property NSString * name;
 @property NSString * location;
+@property NSString *canonicalUrl;
 @property double latitude;
 @property double longitude;
 @property float rating;

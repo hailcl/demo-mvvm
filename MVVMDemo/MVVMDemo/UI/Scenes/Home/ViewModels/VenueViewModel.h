@@ -10,4 +10,5 @@
 @property (nonatomic, copy) NSString * name;
 @property (nonatomic, copy) NSString * location;
 
+@property(nonatomic, copy) NSString *venueId;
 @end

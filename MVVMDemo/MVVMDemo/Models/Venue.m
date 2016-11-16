@@ -5,12 +5,13 @@
 
 #import "Venue.h"
 #import "ExploreVenueParams.h"
+#import "DiscoverVenueParams.h"
 
 
 @implementation Venue
 
 - (instancetype)initWithId:(NSString *)id name:(NSString *)name location:(NSString *)location latitude:(double)lat
-                 longitude:(double)lng rating:(float)rating {
+                 longitude:(double)lng rating:(float)rating canonicalUrl:(NSString *)canonicalUrl {
     if (self = [super init]) {
         _venueId = id;
         _name = name;
@@ -18,6 +19,7 @@
         _latitude = lat;
         _longitude = lng;
         _rating = rating;
+        _canonicalUrl = canonicalUrl;
     }
 
     return self;
